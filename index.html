@@ -393,13 +393,13 @@
                                    'status-escalated';
                 
                 html += '<tr>';
-                html += `<td><strong>${ticket.ticket_id}</strong></td>`;
-                html += `<td>${ticket.person_id}</td>`;
+                html += `<td><strong>${ticket.ticket_id}</strong></td>`;                
                 html += `<td>${ticket.phone}</td>`;
                 html += `<td>${ticket.language}</td>`;
                 html += `<td><span class="status-badge ${statusClass}">${ticket.call_status}</span></td>`;
                 html += `<td>${ticket.symptoms_reported || 'N/A'}</td>`;
                 html += `<td>${ticket.help_requested || 'N/A'}</td>`;
+                html += `<td>${ticket.summary}</td>`;
                 html += `<td>${ticket.escalation_flag ? '⚠️ Yes' : '✅ No'}</td>`;
                 html += `<td>${new Date(ticket.created_at).toLocaleString()}</td>`;
                 html += '</tr>';
